@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跑马灯</title>
+    <style>
+        .wrapper {
+            margin: 0 auto;
+            width: 500px;
+            height: 24px;
+            line-height: 24px;
+            background: pink;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .content {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="content" id="content">您好您好您好您好您好您好您您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好!!!</div><div class="content">您好您好您好您好您好您好您您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好您好!!!</div>
+    </div>
+    <script>
+        var wrapper = document.getElementById('wrapper');
+        var content = document.getElementById('content');
+        var contentWidth = content.clientWidth;
+        var timer = window.setInterval(function () {
+            wrapper.scrollLeft ++;
+            if (wrapper.scrollLeft >= contentWidth){
+                wrapper.scrollLeft = 0;
+            }
+        }, 20)
+    </script>
+</body>
+
+</html>
